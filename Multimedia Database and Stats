@@ -1,0 +1,31 @@
+-- Create a Multimedia store database 
+
+CREATE TABLE Multimedia_Store (ID INTEGER PRIMARY KEY, Name TEXT, Price INTEGER, Asile INTEGER, Quantity INTEGER);
+
+INSERT INTO Multimedia_Store VALUES
+(1, "Xbox One Games", 39.00, 7, 40),
+(2, "Playstation 5 Games", 68.00, 4, 56),
+(3, "Switch Games", 23.00, 3, 13),
+(4, "Card Games", 10.00, 1, 21),
+(5, "Board Games", 31.00, 2, 52), 
+(6, "Xbox Brand Merch", 13.00, 7, 103),
+(7, "Sony Brand Merch", 16.00, 4, 97), 
+(8, "External Hard Drives", 42.00, 2, 40),
+(9, "USB Drives", 8.00, 2, 172),
+(10, "Canned Tea Bags", 15.00, 2, 28),
+(11, "Protien Bars", 12.00, 2, 36),
+(12, "Consoles", 300.00, 6, 14), 
+(13, "Phone Accessories", 15.00, 1, 100),
+(14, "Console Accessories", 52.00, 6, 63),
+(15, "TV Sound Bars", 108.00, 8, 14);
+SELECT * FROM Multimedia_Store;
+
+--Display the database ordered by price
+SELECT * FROM Multimedia_Store 
+ORDER PRICE price ASC;
+
+--What is the average price of items throughout the store?
+SELECT AVG(Price) FROM Multimedia_Store;
+
+--How many items total are in the store? 
+SELECT SUM(Quantity) FROM Multimedia_Store;
